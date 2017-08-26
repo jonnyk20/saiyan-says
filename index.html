@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Saiyan Says</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+<script src="../../jquery-3.2.1.min.js"></script>
+<script src="../../jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script> -->
+<script src="script.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../../bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../../jquery-ui-1.12.1/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<div class="container">
+<div class="row">
+</div>
+
+
+
+
+
+
+
+
+<div> Player Health </div>
+<!-- <div class="progress"> -->
+<!--   <div class="progress-bar bg-success" id="playerHealthBar" role="progressbar" style="width: 100%; min-width: 1em" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div> -->
+
+  <div class="healthBarContainer">
+    <div class="healthBar bg-success" id="playerHealthBar" data-p="100" >
+    </div>
+  </div>
+
+<div> Enemy Health </div>
+  <div class="healthBarContainer">
+    <div class="healthBar bg-warning" id="enemyHealthBar" data-p="100" syle="min-width: 1em">
+    </div>
+  </div>
+<!-- <div class="progress">
+  <div class="progress-bar
+  bg-warning"  id="enemyHealthBar" role="progressbar" style="width: 100%; min-width: 1em" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div> -->
+
+
+<div data-i=0 class="simon element">Attack</div>
+<div data-i=1 class="simon element">Block</div>
+<div data-i=2 class="simon element">Blast</div>
+<div data-i=3 class="simon element">Dodge</div>
+
+<button class="btn btn-default" id="testButton"> Test
+</button>
+
+
+<div> Mode: <span id="mode">Easy</span> </div>
+<div> Enemy Health: <span id="enemyHealth">0</span> </div>
+<div> Player Health: <span id="playerHealth">0</span> </div>
+<div> Input Count: <span id="in-count">0</span> </div>
+<div> Turn: <span id="turn">Demo</span> </div>
+
+  <div  class="element" id="restart"/> Start</div>
+  <div  class="element" id="diff"/> Change Mode</div>
+
+</div>
+</body>
+</html>
+
