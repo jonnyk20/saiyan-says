@@ -2,16 +2,22 @@
   padding: 10px;
 }
 
+.row {
+  margin: 0;
+}
+
 .element {
   display: inline-block;
   background-color: white;
   color: #0275d8;
   border: solid 1px #0275d8;
-  border-radius: 5px;
-  min-width: 50px;
-  min-height: 50px;
+  border-radius: 50px;
+  min-width: 75px;
+  min-height: 75px;
   text-align: center;
   padding: 10px;
+  margin: 5px;
+  padding-top: 25px;
 }
 
 .progress {
@@ -25,7 +31,81 @@
 }
 
 .healthBarContainer {
-  background-color: lightgray;
+   background-color: white; 
   border-radius: 5px;
   margin: 5px;
+  border: solid 1px #3b66e6;
+}
+
+.gameInfo {
+    margin: 5px;
+    border: solid 1px gray;
+    padding: 5px;
+    background-color: #ececec;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.game-screen {
+    background-color: #b2ebff;
+    border: solid 1px #0275d8;
+    height: 228px;
+}
+
+.game-control {
+    border: solid 1px #0275d8;
+    border-left: none;
+    text-align: center;
+    padding: 10px;
+}
+.button-group {
+    margin: auto;
+}
+
+.game-header {
+    border: solid 1px #0275d8;
+    border-bottom: none;
+    text-align: center;
+}
+.game-settings {
+    border: solid 1px #0275d8;
+    border-top: none;
+    text-align: center;    
+}
+
+.block {
+    margin-right: 40px;
+}
+
+.attack {
+    margin-bottom: -20px;
+}
+
+.dodge {
+    margin-top: -20px;
+}
+
+.fighter-space {
+    border: solid 1px #3b66e6;
+    border-radius: 20px;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+}
+
+.figther-2 {
+    position: absolute;
+    right: 20%;
+    top: 30px;
+}
+
+.figther-1 {
+    position: absolute;
+    left: 20%;
+    top: 30px;
+}
+
+.half {
+    float: left !important;
+    width: 50% !important;
 }

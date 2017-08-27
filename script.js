@@ -20,6 +20,8 @@ var audio1 = new Audio(['https://s3.amazonaws.com/freecodecamp/simonSound2.mp3']
 var audio2 = new Audio(['https://s3.amazonaws.com/freecodecamp/simonSound3.mp3']);
 var audio3 = new Audio(['https://s3.amazonaws.com/freecodecamp/simonSound4.mp3']);
 var audio = [audio0, audio1, audio2, audio3];
+var tlp = new Audio('./sounds/misc/instant-transmission.mp3');
+    tlp.volume = 0.2;
 
 var testWidth = 100;
 
@@ -27,10 +29,20 @@ $('#enemyHealth').text(enemyHealth);
 $('#playerHealth').text(playerHealth);
 
 $('#testButton').click(function(){
+  var elem =  $('#enemy-image')
+  var orig = elem.attr("src");
+  var blur = "./images/misc/instant-transmission.png";
+  tlp.play();
+  elem.attr("src", blur);
+  elem.fadeOut( 100, function() {
+    // Animation complete.
+    elem.fadeIn( 100, function() {
+    // Animation complete
+       elem.attr("src", orig);
 
-reduceBar("player");
-playerHealth--
+     });
 
+  });
 })
 
 
@@ -178,11 +190,17 @@ function reduceBar(whichBar, factor){
  var decrease = (100/max) * factor;
  console.log("Current Decrease %: " + decrease)
  //element.attr('aria-valuenow', (currentHealth - decrease));
- element.data("p", (currentHealth - decrease) )
+ element.data("p", (currentHealth - decrease))
+ if ((currentHealth - decrease) < 40) {
+   console.log("danger!");
+   //element.removeClass("bg warning bg-success").addClass("bg-danger");
+   element.addClass("bg-danger");  
+ }
  element.animate({
     width: (currentHealth - decrease) + "%"
   }, 2000, function (){
-    if (currentHealth - decrease === 0) {
+    console.log("Remaing Health is: " + (currentHealth - decrease))
+    if (currentHealth - decrease < 1) {
       reset();
     }
   });
@@ -203,7 +221,7 @@ function hit(index){
    console.log("correct!");
   if (enemyHealth == 0) {
     console.log("You win!");
-    return reset();
+    return;
   }
   console.log(moves[index]);
   generate();
@@ -238,8 +256,8 @@ function reset(){
   inputCount = 0;
   $('#enemyHealth').html(enemyHealth);
   $('#playerHealth').html(playerHealth);
-  $('#playerHealthBar').data('p', 100).css('width', 100 +'%');
-  $('#enemyHealthBar').data('p', 100).css('width', 100 +'%');
+  $('#playerHealthBar').data('p', 100).css('width', 100 +'%').removeClass("bg-danger");
+  $('#enemyHealthBar').data('p', 100).css('width', 100 +'%').removeClass("bg-danger");
   $('#in-count').text(inputCount);
   $('#restart').text("Start")
   demoSwitch(true);
