@@ -15,6 +15,7 @@
 
 <body>
 <div class="container">
+
 <div class="row top-row">
   <div class="col-md-12 game-header">
   Title
@@ -27,20 +28,16 @@
 
       <div class="row health-bars">
         <div class="col-md-6 half">
-          
+          <div> Player Health </div>
           <div class="healthBarContainer">
-            <div class="hb-label"> Player Health: <span id="playerHealth">0</span>  </div>
               <div class="healthBar bg-success" id="playerHealthBar" data-p="100" >
-                  
               </div>
           </div>
         </div>
          <div class="col-md-6 half">
+            <div> Enemy Health </div>
             <div class="healthBarContainer">
-              <div class="hb-label"> Enemy Health: <span id="enemyHealth">0</span> </div>
-        
               <div class="healthBar bg-warning" id="enemyHealthBar" data-p="100" syle="min-width: 1em">
-                  
               </div>
             </div>           
         </div>
@@ -50,30 +47,13 @@
       <div class="row">
         <div class="col-md-12 fight-ring">
 
-          <div class="fighter-space player-space">
+          <div class="fighter-space figther-1">
             <img src="./images/goku/goku-basic.png"  id="player-image" height="100" width="100">
-          </div>
-
-          <div id="projectlie">
-            <div class="fighter-space ki-space">
-              <img src="./images/misc/ki-blast.png"  id="ki-image" height="100" width="100">
-            </div>
-
-            <div class="fighter-space lazer-space">
-              <img src="./images/misc/ki-lazer.png"  id="lazer-image" height="100" width="250">
-            </div>
             
-            <div class="fighter-space km-space">
-              <img src="./images/misc/kamehameha1.png"  id="km-image" height="100" width="400">
-            </div>
           </div>
 
-          <div class="fighter-space enemy-space">
+          <div class="fighter-space figther-2">
             <img src="./images/frieza/frieza-basic.png"  id="enemy-image" height="100" width="100">
-          </div>
-          
-          <div class="fighter-space db-space">
-            <img src="./images/misc/frieza-ball.png"  id="db-image" height="10" width="10">
           </div>
 
         </div>
@@ -110,38 +90,16 @@
 </div>
 
 <div class="row bottom-row">
-  
   <div class="col-md-12 game-settings">
-    <div class="gameInfo bg-primary" style="color: white" id="restart"> Start</div>
+    <div  class="gameInfo" id="restart"/> Start</div>
     <div class="gameInfo"> Mode: <span id="mode">Easy</span> </div>
+    <div class="gameInfo"> Enemy Health: <span id="enemyHealth">0</span> </div>
+    <div class="gameInfo"> Player Health: <span id="playerHealth">0</span> </div>
     <div class="gameInfo"> Input Count: <span id="in-count">0</span> </div>
     <div class="gameInfo"> Turn: <span id="turn">Demo</span> </div> 
-    <div  class="gameInfo" id="diff"> Change Mode</div>
-
+    <div  class="gameInfo" id="diff"/> Change Mode</div>
+    <button class="btn btn-default" id="testButton"> Test</button>
   </div>
-
-  <div class="col-md-12 test-actions">
-    <button class="btn btn-primary test-action" data-p="0" data-a="0">Attack</button>
-    <button class="btn btn-primary test-action" data-p="0" data-a="1">Block</button>
-    <button class="btn btn-primary test-action" data-p="0" data-a="2">Blast</button>
-    <button class="btn btn-primary test-action" data-p="0" data-a="3">Dodge</button>
-    <button class="btn btn-primary test-action" data-p="0" data-a="4">Finish</button>
-    <br>
-    <button class="btn btn-default test-action" data-p="1" data-a="0">E. Attack</button>
-    <button class="btn btn-default test-action" data-p="1" data-a="1">E. Block</button>
-    <button class="btn btn-default test-action" data-p="1" data-a="2">E. Blast</button>
-    <button class="btn btn-default test-action" data-p="1" data-a="3">E. Dodge</button>
-    <button class="btn btn-default test-action" data-p="1" data-a="4">E. Finish</button>
-   
-  </div>
- <button class="btn btn-default" id="testButton"> Test Controls</button>
-  
-
-
-
-
-
-
 </div>
 
 
