@@ -2,16 +2,22 @@
   padding: 10px;
 }
 
+.row {
+  margin: 0;
+}
+
 .element {
   display: inline-block;
   background-color: white;
   color: #0275d8;
   border: solid 1px #0275d8;
-  border-radius: 5px;
-  min-width: 50px;
-  min-height: 50px;
+  border-radius: 50px;
+  min-width: 75px;
+  min-height: 75px;
   text-align: center;
   padding: 10px;
+  margin: 5px;
+  padding-top: 25px;
 }
 
 .progress {
@@ -19,13 +25,140 @@
 }
 
 .healthBar {
-  min-height: 15px;
+  min-height: 20px;
   width: 100%;
-  border-radius: 5px
+  border-radius: 5px;
+  padding-left: 5px;
+  color: #023a6b;
+}
+.hb-label {
+    position: absolute;
+    margin-left: 5px;
+    font-size: small;
 }
 
 .healthBarContainer {
-  background-color: lightgray;
+background-color: white; 
   border-radius: 5px;
   margin: 5px;
+  border: solid 1px #3b66e6;
+}
+
+.gameInfo {
+    margin: 5px;
+    border: solid 1px gray;
+    padding: 5px;
+    /* background-color: #ececec; */
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.game-screen {
+    background-color: #b2ebff;
+    border: solid 1px #0275d8;
+    height: 228px;
+}
+
+.game-control {
+    border: solid 1px #0275d8;
+    border-left: none;
+    text-align: center;
+    padding: 10px;
+}
+.button-group {
+    margin: auto;
+}
+
+.game-header {
+    border: solid 1px #0275d8;
+    border-bottom: none;
+    text-align: center;
+    z-index: 1;
+    background-color: white;
+}
+.game-settings {
+    border: solid 1px #0275d8;
+    border-top: none;
+    text-align: center;    
+}
+
+.block {
+    margin-right: 40px;
+}
+
+.attack {
+    margin-bottom: -20px;
+}
+
+.dodge {
+    margin-top: -20px;
+}
+
+.fighter-space {
+    /* border: solid 1px #3b66e6; */
+    border-radius: 20px;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+}
+
+.enemy-space {
+    position: absolute;
+    right: 20%;
+    top: 30px;
+}
+
+.player-space {
+    position: absolute;
+    left: 20%;
+    top: 30px;
+    z-index: 1;
+}
+
+.half {
+    float: left !important;
+    width: 50% !important;
+    z-index: 1;
+}
+
+.ki-space {
+    display:none;
+    position: absolute;
+    top: 30px;
+    left: 30%;
+    z-index: 1;
+}
+
+.lazer-space {
+    position: absolute;
+    top: 9px;
+    left: 27%;
+    display: none;
+}
+
+.test-actions {
+    margin: 10px;
+}
+
+.fighter-space.km-space {
+    position: absolute;
+    top: 25px;
+    left: 20%;
+    display:none;
+    z-index:1
+}
+.km-space {
+    z-index: 2
+}
+
+.fighter-space.db-space {
+    position: absolute;
+    top: -80px;
+    right: 20%;
+    display: none;
+}
+
+img#db-image {
+    margin-top: 40px;
+
 }
